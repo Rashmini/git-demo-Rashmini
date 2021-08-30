@@ -17,7 +17,28 @@ public class Main {
        if ("+".equals(operation)) {
            answer = add(a, b);
            System.out.println("Answer is: " + answer);
-       } else {
+       }
+       else if("-".equals(operation)) {
+           answer=minus(a,b);
+           System.out.println("Answer is: "+answer);
+       }
+       else if("*".equals(operation)){
+           answer=multy(a,b);
+           System.out.println("Answer is: "+answer);
+       }
+       else if("/".equals(operation)){
+           answer=divide(a,b);
+           System.out.println("Answer is: "+answer);
+       }
+
+       else if("%".equals(operation)){
+           answer=modulus(a,b);
+           System.out.println("Answer is: "+answer);
+       }
+
+
+       else
+        {
            System.out.println("Unsupported operation");
        }
    }
@@ -29,4 +50,15 @@ public class Main {
    private static int minus(int a, int b) {
        return a - b;
    }
+
+    private static int multy(int a, int b) {
+        return a*b;
+    }
+
+    private static int  divide(int a, int b) {
+        return a / b;
+    }
+    private static int modulus(int a, int b) {
+        return a % b;
+    }
 }
